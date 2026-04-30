@@ -1,65 +1,79 @@
+import React from 'react';
 import Image from "next/image";
 
-export default function Home() {
+export default function LaunchPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden font-poppins">
+      {/* Background Gradient */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'linear-gradient(145deg, #FFFFFF 0%, #F0F7FF 30%, #CCE5FF 60%, #3395FF 120%)'
+        }}
+      />
+
+      {/* Grid Pattern */}
+      <div
+        className="absolute inset-0 z-1 opacity-[0.1]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #3395FF 1px, transparent 1px),
+            linear-gradient(to bottom, #3395FF 1px, transparent 1px)
+          `,
+          backgroundSize: '100px 100px',
+          backgroundPosition: '69px 62px'
+        }}
+      />
+
+      {/* Content Container */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-6xl">
+        {/* Main Logo */}
+        <div className="mb-[114px] scale-90 md:scale-100 flex items-center justify-center">
+          <Image
+            src="/Logo 1.svg"
+            alt="Ofran Inc Logo"
+            width={500}
+            height={110}
+            priority
+            className="w-auto h-16 md:h-20 lg:h-24"
+          />
+        </div>
+
+        {/* Message */}
+        <p className="text-[20px] md:text-[25px] text-black font-normal leading-[38px] mb-[103px] max-w-4xl">
+          We’re quietly working on new ways to make a bigger difference.<br className="hidden md:block" /> Updates will be shared soon.
+        </p>
+
+        {/* Subsidiary Info */}
+        <div className="flex flex-col items-center gap-[7px]">
+          <p className="text-lg md:text-xl font-semibold text-slate-900 tracking-wide">
+            A Subsidiary entity of
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className="flex items-center justify-center w-full">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/WORDMARK PNG 1 3.svg"
+              alt="Velrona Group Logo"
+              width={332}
+              height={84}
+              className="w-auto h-16 md:h-20"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* Bottom Contact Banner */}
+      <div className="absolute bottom-[24px] left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-7xl z-50">
+        <a 
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=support@velrona.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-slate-900/40 hover:bg-slate-900/60 transition-colors duration-300 backdrop-blur-md rounded-[19px] py-4 md:py-6 px-2 md:px-10 border border-white/20 text-center cursor-pointer"
+        >
+          <p className="text-white text-[11px] min-[400px]:text-sm md:text-xl font-semibold tracking-wide whitespace-nowrap">
+            For queries contact us <span className="font-bold">support@velrona.com</span>
+          </p>
+        </a>
+      </div>
+    </main>
   );
 }
