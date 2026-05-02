@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ofran Inc | Launching Soon",
+  title: "Ofran",
   description: "We’re quietly working on new ways to make a bigger difference. Updates will be shared soon.",
   icons: {
     icon: "/FAV ICON.png",
