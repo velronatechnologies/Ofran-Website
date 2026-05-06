@@ -121,7 +121,7 @@ const Incroprated8pvt = () => {
                     top: '300px',
                     zIndex: 10
                 }}>
-                    <div 
+                    <div
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         style={{
                             width: '100%',
@@ -137,12 +137,12 @@ const Incroprated8pvt = () => {
                         }}
                     >
                         <span style={{ fontSize: '20px', color: '#000000', fontWeight: 400, fontFamily: "'Anek Latin', sans-serif" }}>{amount}</span>
-                        <svg 
-                            width="23" 
-                            height="23" 
-                            viewBox="0 0 23 23" 
+                        <svg
+                            width="23"
+                            height="23"
+                            viewBox="0 0 23 23"
                             fill="none"
-                            style={{ 
+                            style={{
                                 transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                                 transition: 'transform 0.2s'
                             }}
@@ -167,7 +167,7 @@ const Incroprated8pvt = () => {
                             flexDirection: 'column'
                         }}>
                             {['₹ 1,00,000', '₹ 5,00,000', '₹ 10,00,000'].map((val) => (
-                                <div 
+                                <div
                                     key={val}
                                     onClick={() => {
                                         setAmount(val);

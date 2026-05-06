@@ -215,6 +215,10 @@ const Incroprated6 = () => {
                     onClick={() => {
                         if (selectedType === 'Private Limited') {
                             router.push('/incorporated7-Pvt');
+                        } else if (selectedType === 'LLP') {
+                            router.push('/incorporated12-LLP');
+                        } else if (selectedType === 'OPC') {
+                            router.push('/incorporated10-OPC');
                         } else {
                             router.push('/next-page');
                         }

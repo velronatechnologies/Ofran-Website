@@ -190,7 +190,7 @@ const Incroprated9Pvt = () => {
                 }}
                     onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
                     onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
-                    onClick={() => router.push('/incorporated10-Pvt')}
+                    onClick={() => router.push('/incorporated11')}
                 >
                     <span style={{ fontWeight: 500, fontSize: '27px', color: '#FFFFFF', fontFamily: "'Anek Latin', sans-serif" }}>Continue</span>
                 </div>
